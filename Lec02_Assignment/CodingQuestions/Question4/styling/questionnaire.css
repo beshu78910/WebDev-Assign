@@ -1,0 +1,28 @@
+form {
+  border: 1px solid #ccc;
+}
+.info {
+  margin: 15px;
+}
+.note {
+  font-weight: bold;
+}
+
+.political > p {
+  margin-left: 10px;
+}
+.personal {
+  margin: 15px;
+}
+.info span:nth-of-type(2n) {
+  display: inline-block;
+
+  margin-top: 15px;
+}
+label[for="male"] {
+  display: block;
+}
+label[for="date"] {
+  display: inline-block;
+  margin-top: 15px;
+}

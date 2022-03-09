@@ -1,0 +1,48 @@
+ol > .oddhead:hover {
+  background-color: yellow;
+}
+ol > .evenhead:hover {
+  font-size: 35px;
+}
+ol > .evenhead:hover::first-letter {
+  color: red;
+}
+ol > .evenhead > ol[type="A"] {
+  font-size: 1rem;
+}
+.evenhead > ol > li > ol[type="i"] {
+  background-color: white;
+}
+.oddhead > ol > li > ol[type="i"] {
+  background-color: white;
+}
+ol > li > ol[type="A"] > li:nth-of-type(odd):hover {
+  background-color: yellow;
+}
+ol > li > ol[type="A"] > li:nth-of-type(even):hover {
+  font-size: 35px;
+}
+ol > .oddhead > ol {
+  background-color: white;
+}
+ol > .evenhead > ol {
+  background-color: white;
+}
+li > ol[type="i"] > li:nth-of-type(odd):hover {
+  background-color: yellow;
+}
+li > ol[type="i"] > li:nth-of-type(even):hover {
+  font-size: 35px;
+}
+li > ol[type="i"] > li:nth-of-type(even) {
+  font-size: 1rem;
+}
+li > ol[type="i"] > li:nth-of-type(odd) {
+  font-size: 1rem;
+}
+li > ol[type="i"] > li:nth-of-type(even):hover::first-letter {
+  color: red;
+}
+li > ol[type="A"] > li:nth-of-type(even):hover::first-letter {
+  color: red;
+}

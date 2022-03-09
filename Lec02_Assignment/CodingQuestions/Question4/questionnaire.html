@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styling/questionnaire.css" />
+    <title>Document</title>
+  </head>
+  <body>
+      <h1> Application for permission to date my daughter</h1>
+    <p><span class="note">Note:</span> Form is to be completed at least 21 days prior to date</p>
+    <div>
+      <form action="">
+        <p class="personal">Personal Details</p>
+        <section class="info">
+          <label for="name">Name:</label>
+          <input type="text" placeholder="Enter name here" id="name" /><br />
+          <label for="address">Address:</label>
+          <input
+            type="text"
+            placeholder="Enter address here"
+            id="address"
+          /><br />
+          <label for="email">Email:</label>
+          <input type="text" placeholder="Enter email here" id="email" /><br />
+          <label for="phone">Phone Number:</label>
+          <input
+            type="text"
+            placeholder="Enter 10 digit number"
+            id="phone"
+          /><br />
+          <label for="iq">IQ:</label>
+          <input type="text" placeholder="Enter IQ here" id="iq" /><br />
+          <!-- <label for="male">Gender</label> <br /> -->
+          <label for="male">Gender</label><br>
+          <input type="radio" id="male" value="male" name="gender" />Male<br />
+          <input
+            type="radio"
+            id="female"
+            value="female"
+            name="gender"
+          />Female<br />
+          <input
+            type="radio"
+            id="other"
+            value="other"
+            name="gender"
+          />Other<br />
+          <label for="date">Date of Proposed Outing:</label>
+          <input type="date" id="date" name="date" />
+         
+        </section>
+        <hr />
+        <section class="info">
+          <span>Check All That Apply<span><br><br>
+        <input type="checkbox" name="opt1" id="opt1">
+        <label for="opt1">I have tattoos and/or piercings</label><br>
+        <input type="checkbox" name="opt2" id="opt2">
+        <label for="opt2">I am more than 2 year older than my daughter</label><br>
+        <input type="checkbox" name="opt3" id="opt3">
+        <label for="opt3">I own a panel van or V8 ute</label><br>
+        <input type="checkbox" name="opt4" id="opt4">
+        <label for="opt4">I work full-time</label><br>
+        <input type="checkbox" name="opt5" id="opt5">
+        <label for="opt5">My parents are rich</label><br>
+        <input type="checkbox" name="opt6" id="opt6">
+        <label for="opt6">Is the date at a well lit public location</label>
+
+        
+        </section>
+        <hr>
+        <section class="political">
+            <p> Political Persuasion<span>
+                <select name="choice" id="level">
+                    <option value="left">Left Wing</option>
+                    <option value="right">Right Wing</option>
+                    <option value="neutral">Neutral</option>
+                </select>
+                <span>Education Level Completed:
+                    <select name="choice" id="level">
+                        <option value="university">University</option>
+                        <option value="highschool">HighSchool</option>
+                        <option value="homeschool">Homeschool</option>
+                        <option value="middleschool">MiddleSchool</option>
+                    </select>
+                </span>
+            </span></p> 
+           
+            
+            
+            
+        </section>
+        <hr>
+        <section class="info">
+            <span>Essay Section</span><br>
+            <span>In 50 words or more explain why you want to date my daughter<span><br>
+            <textarea
+                id="reason"
+                name="reason"
+                cols="50"
+                rows="10"
+                placeholder="Enter Text Here"
+            ></textarea><br>
+            <label for="contact">Please upload contact details for 2 references</label><br>
+            <textarea id="contact" name="contact"
+            cols="50" rows="10"
+            placeholder="Enter Text Here"
+            >
+
+            </textarea>
+
+        </section>
+        <section class="info">
+            <span>Upload Police Clearance Certificate, Bank Statement and Medical Certificates here:
+                <!-- <input type="file">
+                Custom Upload -->
+                <button>
+                Attach Files
+                </button>
+                </span>
+            
+           
+        </section>
+      </form>
+      <section class="submit">
+        <button>
+            Send your application
+         </button>
+       </section>
+    </div>
+  </body>
+</html>
