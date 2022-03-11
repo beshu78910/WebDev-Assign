@@ -56,7 +56,7 @@ var fizzBuzz = function(n) {
 	}
 	return testArr;
 };
-4
+
 // 4. Implement isEqual method
 
 var isEqual = function (obj1, obj2) {
