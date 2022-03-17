@@ -1,0 +1,28 @@
+.tab {
+  display: flex;
+  border: 1px none;
+  background-color: rgb(255, 221, 210);
+  /* padding: 10px; */
+  justify-content: flex-start;
+  /* padding-left: 5px; */
+  height: 5vh;
+}
+body {
+  border: 1px solid;
+  border-color: lightgray;
+}
+button {
+  /* border: none; */
+  /* padding: 0; */
+  border: none;
+  background: none;
+  font-weight: bold;
+  width: 6em;
+}
+button:hover {
+  background-color: rgb(237, 246, 249);
+}
+h2,
+p {
+  padding-left: 15px;
+}
