@@ -6,7 +6,8 @@ const paris = document.querySelector('.paris');
 const visible = document.querySelector('.visible');
 console.log(visible);
 console.log(paris);
-visible.style.display = 'none';
+// visible.style.display = 'none';
+
 
 for (let i = 0; i < button.length; i++){
     button[i].onclick = function () {

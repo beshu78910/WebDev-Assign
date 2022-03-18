@@ -9,7 +9,6 @@ const productP = document.getElementById('price');
 // const cellName = document.createElement('td');
 
 
-
 data.addEventListener("submit", function (e) {
     e.preventDefault();
     console.log("Submitted the form");
@@ -19,7 +18,6 @@ data.addEventListener("submit", function (e) {
     const cellPrice = document.createElement('td');
     const delCell = document.createElement('td');
     const delButton = document.createElement('button');
-  
     table.append(newRow);
     newRow.append(cellName);
     cellName.innerHTML = productN.value;
@@ -32,6 +30,11 @@ data.addEventListener("submit", function (e) {
     delButton.innerHTML = 'Delete';
     console.log(table);
     console.log(delButton);
-
     
+})
+
+table.addEventListener("click", function (e) {
+    const item = e.target.closest('tr');
+    item.parentElement.removeChild(item);
+    // e.target.remove();
 })
