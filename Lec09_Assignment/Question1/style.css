@@ -1,0 +1,25 @@
+.main :nth-of-type(odd):hover {
+  background-color: yellow;
+}
+
+.main :nth-of-type(even):hover {
+  color: red;
+  font-size: 35px;
+}
+
+.main :nth-of-type(even) li {
+  font-size: 1rem;
+}
+
+#spec:hover {
+  background-color: white;
+  font-size: 1rem;
+  color: black;
+}
+
+#nested:hover {
+  background-color: white;
+  font-size: 1rem;
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */

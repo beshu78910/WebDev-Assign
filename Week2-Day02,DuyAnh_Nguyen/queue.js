@@ -42,6 +42,7 @@ class Queue {
         } else {
             this.front = this.front.next;
             count--;
+            console.log(remove)
         }
         // if (count > 0) {
         //     let remove = this.back.next;
@@ -65,6 +66,7 @@ let queue = new Queue();
 queue.enqueue(1);
 queue.enqueue(2);
 queue.enqueue(3);
+queue.dequeue();
 
 
 console.log(queue.size());

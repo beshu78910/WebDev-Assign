@@ -47,6 +47,7 @@ class Stack {
         this.top = remove.next;
         --count;
         // return the remove node value (1)
+        console.log(remove.value);
         return remove.value, count;
     }
 

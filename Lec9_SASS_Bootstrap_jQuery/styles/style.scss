@@ -1,0 +1,34 @@
+// Create a scss variable
+$primaryBtn: rgb(56, 146, 142);
+$textColor: rgb(43, 43, 43);
+header {
+  background: lightbule;
+  display: flex;
+  justify-content: center;
+  color: $textColor;
+  // nested css properties
+  // nested button inside of header
+  // this is essentialiy read as
+  // header button {}
+  // good way to condensing code
+  button {
+    background: $primaryBtn;
+    &:hover {
+      //adding pseudo class
+      background: red;
+    }
+  }
+  // header p
+  
+}
+
+// Pass the same variable in multiple css context
+// If we change variable, every properties that
+// use that variable will also change
+header button {
+  background: $primaryBtn;
+}
+
+.contact button {
+  background: $primaryBtn;
+}

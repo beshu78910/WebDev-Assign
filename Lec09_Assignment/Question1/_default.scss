@@ -1,0 +1,18 @@
+@import "./variables";
+@mixin defaultProp {
+  background-color: $defaultColor;
+  font-size: 1rem;
+  color: black;
+}
+
+#spec {
+  &:hover {
+    @include defaultProp();
+  }
+}
+#nested {
+  &:hover {
+    @include defaultProp();
+  }
+  //   background-color: white;
+}

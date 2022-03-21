@@ -1,0 +1,46 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px solid orange;
+}
+@mixin divItem($margin) {
+  padding: 30px;
+  background-color: pink;
+  margin: 0px $margin;
+}
+.flex-lg {
+  @include flexCenter();
+  width: 80%;
+}
+.flex-sm {
+  @include flexCenter();
+  width: 50%;
+}
+.item {
+  @include divItem(40px);
+}
+
+.item-hover {
+  @extend .item;
+  &:hover {
+    color: red;
+    font-size: 30px;
+  }
+}
+
+@mixin corner-icon($name) {
+  .icon-#{$name} {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+}
+#img-container {
+  height: 200px;
+  width: 700px;
+  border: 2px orange solid;
+
+  @include corner-icon(google);
+}

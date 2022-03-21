@@ -1,0 +1,89 @@
+h3 {
+  background-color: rosybrown;
+  font-size: 30px;
+}
+
+body {
+  background-color: #f0e4c5;
+}
+
+ul {
+  background-color: aqua;
+}
+
+ul li {
+  color: coral;
+}
+
+ul li:hover {
+  background-color: palevioletred;
+}
+
+ul li:first-child {
+  color: darkblue;
+}
+
+ul li::first-letter {
+  font-size: 30px;
+}
+
+ul li span {
+  font-size: 20px;
+  font-style: oblique;
+}
+
+.flex-lg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 2px solid orange;
+  width: 80%;
+}
+
+.flex-sm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 2px solid orange;
+  width: 50%;
+}
+
+.item, .item-hover {
+  padding: 30px;
+  background-color: pink;
+  margin: 0px 40px;
+}
+
+.item-hover:hover {
+  color: red;
+  font-size: 30px;
+}
+
+#img-container {
+  height: 200px;
+  width: 700px;
+  border: 2px orange solid;
+}
+
+#img-container .icon-google {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+/*# sourceMappingURL=style.css.map */

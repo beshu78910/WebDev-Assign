@@ -1,0 +1,43 @@
+// you can write CSS in sass file.
+// body {
+//   background-color: rgb(196, 151, 93);
+// }
+
+@import "header";
+
+// SASS variable
+$my-color: rgb(240, 228, 197);
+body {
+  background-color: $my-color;
+}
+
+
+// ul li span {
+//   font-size: 20px;
+// }
+
+ul {
+  background-color: aqua;
+  li {
+    color: coral;
+    &:hover {
+      background-color: palevioletred;
+    }
+    &:first-child {
+      color: darkblue;
+    }
+    &::first-letter {
+      font-size: 30px;
+    }
+
+    span {
+      font-size: 20px;
+      font-style: oblique;
+    }
+  }
+
+}
+
+
+
+@import "content";

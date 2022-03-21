@@ -1,0 +1,19 @@
+@import "./variables";
+@mixin change {
+  color: $evenColor;
+  font-size: 35px;
+}
+.main :nth-of-type(odd) {
+  &:hover {
+    background-color: $oddColor;
+  }
+}
+
+.main :nth-of-type(even) {
+  &:hover {
+    @include change();
+  }
+  li {
+    font-size: 1rem;
+  }
+}
