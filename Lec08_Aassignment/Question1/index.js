@@ -12,7 +12,7 @@ const parsedData = fetch('https://jsonplaceholder.typicode.com/users')
     .then(data => {
         console.log('Data Parsed')
         // console.log(data)
-        return data;
+        return data;                         
     })
     .catch(e => {
         console.log('OH No! Error!', e);
