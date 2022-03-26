@@ -59,3 +59,5 @@ module.exports = {
     deleteT,
     finishT
 };
+
+location.reload();

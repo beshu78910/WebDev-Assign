@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <style>
+          body{
+              margin: 20px;
+          }
+          *{
+              text-align: center;
+          }
+         
+      </style>
+       <title>{{ pageTitle }}</title>
+  </head>
+  <body>
+      <h3>TO DO App</h3>
+            <form action="" method="post">
+                <div class="form-group">
+                    <input type="text" class="form-control"  placeholder="Please enter ID..." id='id' name="id">
+                    <input type="text" class="form-control"  placeholder="Please enter title..." id='title' name="title">
+                    <input type="text" class="form-control"  placeholder="Please enter time.." id='time' name="time">
+                    <input type="text" class="form-control"  placeholder="Please enter status.." id='stat' name="status">
+                    <input type="text" class="form-control"  placeholder="Please enter description.." id='desc' name="description">
+
+                </div>
+                <button type="submit" class="btn btn-primary" id='submit'>Submit</button>
+            </form>
+            <br/><hr/><br/>
+            <table class="table table-striped" id='list'>
+                <thead>
+                        <td>ID</td>
+                        <td>Title</td>
+                        <td>Time</td>
+                        <td>Status</td>
+                        <td>Description</td>
+                </thead>
+                <tbody>
+                    <% for(let list of lists) {%>
+                  
+                    <tr>
+                        <td><%=list.id%></td>
+                        <td><%=list.title%> </td>
+                        <td><%=list.time%></td>
+                        <td><%=list.stat%> </td>
+                        <td><%=list.description%> </td> 
+                    </tr>   
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+        <script>
+            const listTable = document.getElementById('list')
+            // console.error('Error:', error);alert('ERROR!');console.log('test')
+            listTable.addEventListener('click',function(e){
+                // console.log(e.target.parentNode)
+                
+                //TODO...
+                //send the request to toggle the item status
+            })
+
+            const submitBtn = document.getElementById('submit')
+            
+                submitBtn.addEventListener('click',function(e){
+                    // e.preventDefault();
+                    // console.log('test');
+                    const titleInput = document.getElementById('title')
+                    const descInput = document.getElementById('desc')
+                    const idInput = document.getElementById('title')
+                    const timeInput = document.getElementById('desc')
+                    const statusInput = document.getElementById('stat');
+                   
+                    // console.log(titleInput);
+                    fetch('http://localhost:3000/todos', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({id:idInput.value, title:titleInput.value,time:timeInput.value,status:statusInput.value,description:descInput.value}),
+                    })
+                    .then(response => {response.json()})
+                    .then(data => { console.log('Success:', data); alert('ADDED!')})
+                    .catch((error) => {console.log('test')});
+                })
+        </script>
+  </body>
+</html>
