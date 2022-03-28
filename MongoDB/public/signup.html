@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SIGN UP Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2>Sign Up</h2>
+    <hr />
+    <form>
+      <label>Your Username</label>
+      <input type="text" id="name" />
+      <br /><br />
+
+      <label>Your Email</label>
+      <input type="text" id="email" />
+      <br /><br />
+
+      <label>Your Password</label>
+      <input type="password" id="password" />
+      <br /><br />
+
+      <input type="Button" id="signup" value="Sign Up" />
+      <br /><br />
+    </form>
+
+    <script>
+      $(document).ready(function () {
+        $("#signup").on("click", function () {
+          $.ajax({
+            url: "/signup",
+            type: "POST",
+            data: JSON.stringify({
+              name: $("#name").val(),
+              email: $("#email").val(),
+              password: $("#password").val(),
+            }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

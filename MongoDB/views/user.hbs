@@ -1,0 +1,22 @@
+<style>
+    table {
+        width: 50%;
+    }
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<h2>User List</h2>
+<hr/>
+<table>
+    <tbody>
+        {{#each data}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.password}}</td>
+                <!--property value here-->
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
