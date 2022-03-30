@@ -1,0 +1,47 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>    
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css">   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+</head>    
+<body>    
+    <h2>Login Page</h2><br>    
+    <div class="login">    
+    <form id="login">    
+        <label>Your Email</label>    
+        <input type="text" id="email">    
+        <br><br>    
+        <label>Your Password</label>    
+        <input type="password" id="password">    
+        <br><br>    
+        <input type="Button" id="btn" value="Log In">       
+        <br><br>     
+    </form>  
+    
+    <script>
+        $(document).ready(function(){
+            $('#btn').on('click',function(){
+                $.ajax({
+                    url: "/user/signin",
+                    type:"POST",
+                    data:JSON.stringify({
+                        email: $('#email').val(),
+                        password: $('#password').val()
+                    }),
+                    contentType:"application/json; charset=utf-8",
+                    success: function(res){
+                        console.log(res)
+                        // window.location = res.redirect
+                    },
+                    error:function(res){
+                        alert(res.responseJSON.errorMsg)
+                        // location.reload()
+                    }
+                })
+        })
+        })
+
+    </script>
+</body>    
+</html>  
